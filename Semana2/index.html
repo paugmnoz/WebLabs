@@ -1,0 +1,135 @@
+<!DOCTYPE>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <title>Holi</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+</head>
+
+<header>
+    <div class="parent">
+        <div class="child">
+        </div>
+    </div>
+
+    <h1 class="t" href="#">
+        <strong>Gravity Falls</strong>
+    </h1>
+
+</header>
+
+<body>
+    <div class="container">
+        <p>For their summer vacation, 12-year-old Dipper Pines and his twin sister Mabel are dropped off from their home in
+            Piedmont, California to the fictitious town of Gravity Falls, Roadkill County, Oregon to spend the summer with
+            their Great Uncle Stan Pines (often shortened to Grunkle Stan), who runs a tourist trap called the 'Mystery Shack'.
+            Things are not what they seem in this small town, and with the help of a mysterious journal that Dipper finds
+            in the forest, they begin unraveling the local mysteries. With appearances from Wendy Corduroy, Mystery Shack
+            cashier; Soos Ramirez, friend of Dipper and Mabel and handyman to Grunkle Stan; plus an assortment of other characters,
+            Dipper and Mabel always have an intriguing day to look forward to.
+        </p>
+
+        <div class="episodes">
+
+            <div class="episodeChart">
+
+                <img src="resources/ep1.jpg" alt="" width="170px">
+                <h3>
+                    <b>Episodio 1</b>
+                </h3>
+                <p>
+                    <b>Year:</b> 2014</p>
+                <p>
+                    <strong>Duration: </strong> 10min</p>
+                <button class="watch">Watch</button>
+                <button class="like" id="likee" onclick="liked()">
+                    <i class="material-icons">favorite</i>
+                </button>
+
+
+            </div>
+            <div class="episodeChart">
+                <img src="resources/ep1.jpg" alt="" width="170px">
+                <h3>
+                    <b>Episodio 1</b>
+                </h3>
+                <p>
+                    <b>Year:</b> 2014</p>
+                <p>
+                    <strong>Duration: </strong> 10min</p>
+                <button class="watch">Watch</button>
+                <button class="like">
+                    <i class="material-icons">favorite</i>
+                </button>
+            </div>
+
+            <div class="episodeChart">
+                <img src="resources/ep1.jpg" alt="" width="170px">
+                <h3>
+                    <b>Episodio 1</b>
+                </h3>
+                <p>
+                    <b>Year:</b> 2014</p>
+                <p>
+                    <strong>Duration: </strong> 10min</p>
+                <button class="watch">Watch</button>
+                <button class="like">
+                    <i class="material-icons">favorite</i>
+                </button>
+            </div>
+
+            <div class="episodeChart">
+                <img src="resources/ep1.jpg" alt="" width="170px">
+                <h3>
+                    <b>Episodio 1</b>
+                </h3>
+                <p>
+                    <b>Year:</b> 2014</p>
+                <p>
+                    <strong>Duration: </strong> 10min</p>
+                <button class="watch">Watch</button>
+                <button class="like">
+                    <i class="material-icons">favorite</i>
+                </button>
+            </div>
+
+            <div class="episodeChart">
+                <img src="resources/ep1.jpg" alt="" width="170px">
+                <h3>
+                    <b>Episodio 1</b>
+                </h3>
+                <p>
+                    <b>Year:</b> 2014</p>
+                <p>
+                    <strong>Duration: </strong> 10min</p>
+                <button class="watch">Watch</button>
+                <button class="like">
+                    <i class="material-icons">favorite</i>
+                </button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        var likebtn = document.getElementById("likee");
+
+        function like() {
+            $('button').on('click', function () {
+
+                $(this).addClass('selected');
+            });
+        }
+    </script>
+
+</body>
+
+</html>

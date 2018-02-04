@@ -1,0 +1,140 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+        font-size: 35px;
+        color: #ffffff !important;
+        text-align: center;
+        margin: auto;
+        position: absolute;
+        top: -350px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 50px;
+        text-decoration: none;
+    }
+
+
+.parent {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+}
+
+.child {
+    background-image: url("resources/headerImg2.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    filter: blur(3px)
+}
+
+.parent:hover .child,
+.parent:focus .child {
+    -ms-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    filter: blur(0px)
+}
+
+body {
+    background: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    margin: auto;
+    width: 60%;
+    padding-top: 2em;
+    padding-bottom: 10em;
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin-top: 2em;
+    }
+}
+
+.episodes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.episodeChart {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    box-shadow: 2px 2px 5px #636363;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    p {
+        font-size: 15px;
+        padding: 5px 2px 0px 10px;
+    }
+    h3 {
+        padding: 5px 2px 5px 10px;
+        background-color: rgb(33, 36, 49);
+        color: #ffffff;
+        font-size: 16px;
+    }
+    button {
+        width: 100%;
+        border: none;
+        margin-top: 5px;
+        padding: 10px;
+    }
+    button:hover {
+        background-color: rgb(255, 149, 50);
+        color: #ffffff;
+    }
+    
+    .like button {
+        width: 100%;
+        border: none;
+        margin-top: 5px;
+        padding: 10px;
+        background-color: #ffffff;
+
+    
+           
+    
+    }
+ 
+}
+
+
+ button:focus {background-color: crimson;
+    color: #ffffff;}
+
+.selected button {background-color: crimson;
+    color: #ffffff;}
+
+.episodeChart:hover {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.11);
+}
+
