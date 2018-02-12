@@ -4,9 +4,47 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+   
+
+}
+$primary-color: rgb(252, 138, 46);
+
+.colorBody {
+    background-color: rgb(253, 253, 253);
 }
 
-h1 {
+.infoCharacter {
+    position: absolute;
+    left: 37%;
+    width: 600px;
+    h1  {
+        text-align: left;
+        text-shadow: 2px 2px 5px #636363;
+
+    }
+
+    p {
+        position: absolute;
+     
+        top: -130px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        margin:  0;
+        font-weight: 700;
+        color: white;
+        text-shadow: 2px 2px 5px #636363;
+        
+    }
+
+}
+
+.overlay {
+    background-color: #636363;
+}
+
+.t {
         font-size: 35px;
         color: #ffffff !important;
         text-align: center;
@@ -20,6 +58,37 @@ h1 {
         text-decoration: none;
     }
 
+    
+.t2 {
+    font-size: 25px;
+    color: #ffffff !important;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: -250px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    text-decoration: none;
+}
+
+
+
+
+.characterPhoto {
+        width:15%;
+        position: absolute;
+        top: 120px;
+        left: 20%;
+        bottom: 0;
+        right: 0;
+    
+}
+
+h1 {
+    color: $primary-color;
+}
 
 .parent {
     width: 100%;
@@ -28,8 +97,34 @@ h1 {
     position: relative;
 }
 
+
+.mabel {
+    background-image: url("resources/mabel2.jpg");  
+    
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    filter: blur(3px)
+
+   }
+
+
 .child {
-    background-image: url("resources/headerImg2.jpg");
+
+    &.home {
+        background-image: url("resources/headerImg2.jpg");
+    }
+
+    
+    &.episode1 {
+        background-image: url("resources/episode1.png");
+    }
+
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -43,7 +138,8 @@ h1 {
 
 .parent:hover .child,
 .parent:focus .child {
-    -ms-transform: scale(1.05);
+
+     -ms-transform: scale(1.05);
     -moz-transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -o-transform: scale(1.05);
@@ -69,6 +165,8 @@ body {
     }
 }
 
+
+
 .episodes {
     display: flex;
     flex-direction: row;
@@ -76,14 +174,34 @@ body {
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    margin-top: 3em;
+    margin-top: 1em;
     flex-wrap: wrap;
 }
 
+.per {
+    width: 23%;
+      margin-right:1%;
+      display: inline-block;
+      margin-top: 2em;
+      box-shadow: 2px 2px 5px #636363;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+      background-color: #ffffff;
+
+    img {
+        width: 100%;
+    }
+
+}
 .episodeChart {
+
+  
     order: 0;
     flex: 0 19% auto;
     align-self: auto;
+    background-color: #ffffff;
     width: 19%;
     box-shadow: 2px 2px 5px #636363;
     -webkit-transition: all .5s;
@@ -92,6 +210,8 @@ body {
     transition: all .5s;
     margin-top: 2em;
 
+
+   
     img {
         width: 100%;
     }
@@ -127,6 +247,27 @@ body {
    
 }
 
+.volver {
+
+    a {
+        text-decoration: none;
+        color:rgb(37, 37, 37);
+    }
+    button {
+        width: 150px;
+        border: none;
+
+        margin-top: 2em;
+        padding: 10px;
+    }
+    button:hover {
+        background-color: rgb(255, 149, 50);
+        color: #ffffff;
+
+         }
+    
+}
+
 .episodeChart.best::after {
 
             content: ' ';
@@ -147,12 +288,16 @@ body {
 .selected button {background-color: crimson;
     color: #ffffff;}
 
-.episodeChart:hover {
+.episodeChart:hover, .per:hover {
     -ms-transform: scale(1.2);
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.11);
+}
+
+.article {
+    margin-left: 10%;
 }
 
 @media (min-width: 0px) and (max-width: 599px) {
@@ -171,6 +316,11 @@ body {
         width: 80%;
         
     }
+
+    .per {
+        width:  80%;
+        
+    }
    
 
 }
@@ -181,6 +331,12 @@ body {
         flex: 0 50% auto;
         width: 47%;
     }
+    .per {
+        width:  60%;
+        
+    }
+   
+
 
    
 }
