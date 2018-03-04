@@ -29,7 +29,7 @@ var view = {
         var episodesDiv = $( ".episodes" );
         episodesDiv.innerHtml = '';
 
-        episodeList.episodios.forEach(function (episodioNew, position) {
+        episodeList.episodios.forEach(function (episodioNew) {
             var episodeDiv = document.createElement('div');
             episodeDiv.className = 'episodeChart';
 
@@ -40,8 +40,7 @@ var view = {
             var innerH3 = document.createElement('h3');
             innerH3.textContent = 'Episodio' + episodioNew.numEpval;
 
-            episodeDiv.appendChild(innerH3);
-
+episodeDiv.appendChild(innerH3);
             //CREAR EL PARRAFO DEL AÑO
             var innerPYear = document.createElement('p');
             innerPYear.textContent = 'Year:' + episodioNew.yearval;
@@ -56,6 +55,8 @@ var view = {
 
             //CREAR BOTON
             episodeDiv.appendChild(this.createWatchButton());
+
+            episodesDiv.appendChild(episodeDiv);
 
 
         }, this);
