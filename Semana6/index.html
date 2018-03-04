@@ -36,7 +36,7 @@
             Dipper and Mabel always have an intriguing day to look forward to.
         </p>
 
-        <div class="episodes">
+        <section class="episodes">
 
             <div class="episodeChart best" onclick="location.href='episode.html';" style="cursor: pointer;"> 
                 <img src="resources/ep1.jpg" alt="" >
@@ -102,22 +102,17 @@
                 <button class="watch">Watch</button>
                
             </div>
-        </div>
+        </section>
 
 
 
     </div>
+ <!-- Your web-app is https, so your scripts need to be too -->
+ <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 
-    <script>
-        var likebtn = document.getElementById("likee");
-
-        function like() {
-            $('button').on('click', function () {
-
-                $(this).addClass('selected');
-            });
-        }
-    </script>
 
 </body>
 

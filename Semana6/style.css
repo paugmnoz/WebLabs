@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: 0;
+  font-family: 'VT323', monospace;
+  font-family: "PT Mono", monospace;
+}
+
+section {
+  width: 100%;
+  background-color: antiquewhite;
+  font-size: 0%;
+}
+
+div {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20px;
+  display: inline-block;
+}
+
+.column div {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20px;
+  display: inline-block;
+}
+
+input {
+  display: block;
+}
+
+.izq {
+  float: left;
+  background-color: #252525;
+}
+
+.izq h1 {
+  color: #d4d4d4;
+}
+
+.izq h2 {
+  color: #d4d4d4;
+}
+
+.izq p {
+  color: #1ef353;
+}
+
+.izq ul {
+  color: #1ef353;
+}
+
+.izq a {
+  color: coral;
+  text-decoration: none;
+}
+
+.der {
+  background-color: #e7e7e7;
+}
+
+h1 {
+  font-size: 21px;
+}
+
+h2 {
+  font-size: 19px;
+  margin-top: 2em;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+u {
+  text-decoration: #002fff wavy underline;
+}
+
+ul {
+  font-size: 16px;
+  list-style: none;
+  margin-top: 2em;
+}
+
+ol {
+  font-size: 18px;
+  margin-top: 2em;
+}
+
+li span {
+  color: #ff0062;
+}
+
+input {
+  margin-top: 1em;
+}
+
+label {
+  color: white;
+}
+
+button {
+  margin-top: 2em;
+}
+
+.clear h1 {
+  color: #ff2f52;
+}
+
+.clear h2 {
+  color: #ff2f52;
+}
+
+.clear p {
+  color: #252525;
+}
+
+ol {
+  color: #252525;
+  margin-left: 20px;
+}
+
+.clear a {
+  color: #1d34ff;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
