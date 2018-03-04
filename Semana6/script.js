@@ -20,43 +20,55 @@ var episodeList = {
     }
 };
 
-episodeList.addEpisode("resources/ep1.jpg", "5", "2015", "25min");
-episodeList.addEpisode("resources/ep1.jpg", "5", "2015", "25min");
-episodeList.addEpisode("resources/ep1.jpg", "5", "2015", "25min");
 
+
+//PARA MANEJAR LAS ACCIONES DESDE EL HTML
+var handlers = {
+    addEpisode: function(){
+        episodeList.addEpisode("resources/ep1.jpg", "5", "2015", "25min");
+        episodeList.addEpisode("resources/ep1.jpg", "5", "2015", "25min");
+        episodeList.addEpisode("resources/ep1.jpg", "5", "2015", "25min");
+        view.displayEpisodes();
+      },
+}
+
+//PARA QUE SE CREE EL HTML Y VER LOS EPISODIOS 
 var view = {
     displayEpisodes: function () {
-        var episodesDiv = $( ".episodes" );
-        episodesDiv.innerHtml = '';
+        //ENCONTRAR LA SECCION DE EPISODIOS
+        var episodesSection = $( ".episodes" );
+        episodesSection.innerHtml = '';
 
         episodeList.episodios.forEach(function (episodioNew) {
-            var episodeDiv = document.createElement('div');
-            episodeDiv.className = 'episodeChart';
+            //CREAR EL DIV DEL EPISODIO
+            var innerEpisodeDiv = document.createElement('div');
+            innerEpisodeDiv.className = 'episodeChart';
 
-            var innerimg = document.createElement( ' <img src=' + episodioNew.imgval + 'alt="" >');
-            episodeDiv.appendChild(innerimg);
+            //CREAR IMAGEN
+            var innerimg = document.createElement( '<img src="resources/ep1.jpg" alt="">');
+            innerEpisodeDiv.appendChild(innerimg);
             
             // CREAR EL H3
             var innerH3 = document.createElement('h3');
             innerH3.textContent = 'Episodio' + episodioNew.numEpval;
 
-episodeDiv.appendChild(innerH3);
+            innerEpisodeDiv.appendChild(innerH3);
             //CREAR EL PARRAFO DEL AÑO
             var innerPYear = document.createElement('p');
             innerPYear.textContent = 'Year:' + episodioNew.yearval;
 
-            episodeDiv.appendChild(innerPYear);
+            innerEpisodeDiv.appendChild(innerPYear);
 
             //CREAR EL PARRAFO DE DURACION
             var innerPDuration = document.createElement('p');
             innerPDuration.textContent = 'Duration:' + episodioNew.durationval;
 
-            episodeDiv.appendChild(innerPDuration);
+            innerEpisodeDiv.appendChild(innerPDuration);
 
             //CREAR BOTON
-            episodeDiv.appendChild(this.createWatchButton());
+            innerEpisodeDiv.appendChild(this.createWatchButton());
 
-            episodesDiv.appendChild(episodeDiv);
+            episodesDiv.appendChild(innerEpisodeDiv);
 
 
         }, this);
@@ -70,6 +82,3 @@ episodeDiv.appendChild(innerH3);
         }
         
 }
-
-
-view.displayEpisodes();
