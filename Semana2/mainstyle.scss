@@ -7,10 +7,14 @@
    
 
 }
+$primary-color: rgb(252, 138, 46);
 
+<<<<<<< HEAD
 
 $primary-color: rgb(252, 138, 46);
 
+=======
+>>>>>>> 6d6a7c498681628d316b05520cf75c0cd3ebba70
 .colorBody {
     background-color: rgb(253, 253, 253);
 }
@@ -211,7 +215,10 @@ body {
     -o-transition: all .5s;
     transition: all .5s;
     margin-top: 2em;
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> 6d6a7c498681628d316b05520cf75c0cd3ebba70
 
 
    
@@ -271,6 +278,7 @@ body {
     
 }
 
+<<<<<<< HEAD
 .episodeChart.best::before {
 
             content: ' ';
@@ -302,6 +310,19 @@ body {
 
 
 
+=======
+.episodeChart.best::after {
+
+            content: ' ';
+            
+            width: 200px;
+            height: 200px;
+            top: 6px;
+            color: red;
+        
+       
+    
+>>>>>>> 6d6a7c498681628d316b05520cf75c0cd3ebba70
 }
 
 

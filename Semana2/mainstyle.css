@@ -188,7 +188,10 @@ body {
   -o-transition: all .5s;
   transition: all .5s;
   margin-top: 2em;
+<<<<<<< HEAD
   position: relative;
+=======
+>>>>>>> 6d6a7c498681628d316b05520cf75c0cd3ebba70
 }
 
 .episodeChart img {
@@ -244,6 +247,7 @@ body {
   color: #ffffff;
 }
 
+<<<<<<< HEAD
 .episodeChart.best::before {
   content: ' ';
   position: absolute;
@@ -266,6 +270,14 @@ body {
   top: 0px;
   right: 0px;
   background-color: red;
+=======
+.episodeChart.best::after {
+  content: ' ';
+  width: 200px;
+  height: 200px;
+  top: 6px;
+  color: red;
+>>>>>>> 6d6a7c498681628d316b05520cf75c0cd3ebba70
 }
 
 button:focus {
