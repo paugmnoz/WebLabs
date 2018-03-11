@@ -1,9 +1,17 @@
-var episodio = {
-    imgCover: "",
-    numEp: "5",
-    year: "2015",
-    duration: "20min",
-};
+var _episodios = [{
+        imgCover: "",
+        numEp: "5",
+        year: "2015",
+        duration: "20min",
+    },
+    {
+        imgCover: "",
+        numEp: "6",
+        year: "2016",
+        duration: "15min",
+    },
+
+];
 
 var newEpisodio = ["resources/ep1.jpg", "5", "2015", "25min"];
 
@@ -24,19 +32,25 @@ var episodeList = {
 
 //PARA MANEJAR LAS ACCIONES DESDE EL HTML
 var handlers = {
-    addEpisode: function(){
+    addEpisode: function () {
+        episodeList.addEpisode("resources/ep1.jpg", "5", "2015", "25min");
         episodeList.addEpisode("resources/ep1.jpg", "5", "2015", "25min");
         episodeList.addEpisode("resources/ep1.jpg", "5", "2015", "25min");
         episodeList.addEpisode("resources/ep1.jpg", "5", "2015", "25min");
         view.displayEpisodes();
-      },
+
+    },
 }
+
+
+var addEpisodeBtn = document.getElementsByClassName("watch add");
+
 
 //PARA QUE SE CREE EL HTML Y VER LOS EPISODIOS 
 var view = {
     displayEpisodes: function () {
         //ENCONTRAR LA SECCION DE EPISODIOS
-        var episodesSection = $( ".episodes" );
+        var episodesSection = document.querySelector(".episodes");
         episodesSection.innerHtml = '';
 
         episodeList.episodios.forEach(function (episodioNew) {
@@ -45,9 +59,10 @@ var view = {
             innerEpisodeDiv.className = 'episodeChart';
 
             //CREAR IMAGEN
-            var innerimg = document.createElement( '<img src="resources/ep1.jpg" alt="">');
+            var innerimg = document.createElement('img');
+            innerimg.src= episodioNew.imgval;
             innerEpisodeDiv.appendChild(innerimg);
-            
+
             // CREAR EL H3
             var innerH3 = document.createElement('h3');
             innerH3.textContent = 'Episodio' + episodioNew.numEpval;
@@ -68,17 +83,17 @@ var view = {
             //CREAR BOTON
             innerEpisodeDiv.appendChild(this.createWatchButton());
 
-            episodesDiv.appendChild(innerEpisodeDiv);
+            episodesSection.appendChild(innerEpisodeDiv);
 
 
         }, this);
     },
 
-    createWatchButton: function() {
+    createWatchButton: function () {
         var watchButton = document.createElement('button');
         watchButton.textContent = 'Watch';
         watchButton.className = 'watch';
-          return watchButton;
-        }
-        
+        return watchButton;
+    }
+
 }
