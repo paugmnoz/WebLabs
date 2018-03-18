@@ -1,0 +1,44 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+
+}
+.usuariosSection {
+
+    .contenedor {
+        display: inline-block;
+        margin: 0;
+        width: 60%;
+        height: auto;
+        background-color: aqua;
+
+        .persona {
+            width: 30%;
+            background-color: blue;
+            height: 200px;
+
+        }
+
+    }
+
+    .form {
+        display: inline-block;
+        float: right;
+        width: 30%;
+        margin: 0;
+        height: auto;
+        background-color: brown;
+        
+        label {
+            display: block;
+        }
+
+        input {
+            display: block;
+        }
+    }
+}

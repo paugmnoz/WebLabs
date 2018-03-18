@@ -1,0 +1,39 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.usuariosSection .contenedor {
+  display: inline-block;
+  margin: 0;
+  width: 60%;
+  height: auto;
+  background-color: aqua;
+}
+
+.usuariosSection .contenedor .persona {
+  width: 30%;
+  background-color: blue;
+  height: 200px;
+}
+
+.usuariosSection .form {
+  display: inline-block;
+  float: right;
+  width: 30%;
+  margin: 0;
+  height: auto;
+  background-color: brown;
+}
+
+.usuariosSection .form label {
+  display: block;
+}
+
+.usuariosSection .form input {
+  display: block;
+}
+/*# sourceMappingURL=mainstyle.css.map */
