@@ -1,3 +1,17 @@
+//Caluladora
+const express = require('express');
+const app = express();
+
+app.get ('/', (req, res) => res.send('CALCULADORA'));
+app.listen(3000, () => console.log('Exampleee app listening on port 3000!'));
+
+app.get('/suma', function (req, res) {
+  res.send('Sumar')
+})
+
+
+//Tutorial
+/*
 const http = require('http');
 //to load a file
 const fs = require('fs');
@@ -22,13 +36,11 @@ fs.readFile('index.html', (err, html) => {
 
   });
 
-
-
 });
+*/
 
 
-
-//SERVER IN CLASS
+//SERVER example made in class
 /*const http = require('http');
 console.log(http);
 
