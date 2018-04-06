@@ -5,11 +5,29 @@ const app = express();
 app.get ('/', (req, res) => res.send('CALCULADORA'));
 app.listen(3000, () => console.log('Exampleee app listening on port 3000!'));
 
+//sumar
 app.get('/suma', function (req, res) {
-  res.send('Sumar')
-})
 
+ if( Object.keys(req.query).length === 0){
+  console.log("no hay nada");
+  res.send('no hay nada');
+ } 
+else if (Object.keys(req.query).length === 2) {
+  var {a, b} = req.query;
+  //    var suma = a +b;
+      console.log(a+b);
+    
+    console.log(req.query);
+  res.send('asdfas' + a+b);
+}
+ 
 
+ 
+   
+  
+  
+
+});
 //Tutorial
 /*
 const http = require('http');
