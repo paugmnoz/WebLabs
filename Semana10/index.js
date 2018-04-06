@@ -1,5 +1,28 @@
 
 const http = require('http');
+//to load a file
+const fs = require('fs');
+
+
+const hostname = '127.0.0.1'
+const port = 3000;
+
+
+  const server = http.createServer((req, res) => {
+    //200 is the  code that basically says everything is ok, when you make a request
+    res.statusCode = 200;
+    res.setHeader('Content-type', 'text/plain');
+    res.end('hellou');
+  
+  server.listen(port, hostname, () => {
+    console.log('Sever started on port ' + port);
+  });
+});
+
+
+
+//SERVER IN CLASS
+/*const http = require('http');
 console.log(http);
 
 function createServ (req, res) {
@@ -11,7 +34,7 @@ const server = http.createServer(createServ);
 
 
   server.listen(8000);
-
+*/
 /*
 //1
 var lista  = [70, 200, 80, 70, 180];
