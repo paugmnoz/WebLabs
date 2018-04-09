@@ -20,12 +20,6 @@ else if (Object.keys(req.query).length === 2) {
     console.log(req.query);
   res.send('asdfas' + a+b);
 }
- 
-
- 
-   
-  
-  
 
 });
 //Tutorial
