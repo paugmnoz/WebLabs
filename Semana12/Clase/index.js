@@ -1,10 +1,23 @@
 //guardar librería en una constante
-const express = require('express');
+const express = require('express'),
+      consolidate = require('consolidate'),
+      hbs =  require('handlebars');
+
 //crear app
-const app = express();
+var app = express();
+//consolidate hace conexion con express y hbs
+app.engine('hbs', consolidate.handlebars);
+app.set('view engine', 'hbs');
+
+//definir template, y carpeta donde estara el template
+app.set('views', './views');
+
 //configrar una ruta
 app.get('/', function(req, res){
-    res.send('holap');
+
+    res.render('index', {
+        titulo: 'Hola'
+    });
 });
 
 app.listen(7070, function(){
