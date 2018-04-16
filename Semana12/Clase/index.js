@@ -12,7 +12,7 @@ app.set('view engine', 'hbs');
 //definir template, y carpeta donde estara el template
 app.set('views', './views');
 
-//definir hoja de estilos
+//definir hoja de estilos 1. carpeta virtual 2. carpeta real
 app.use('/css', express.static('css'));
 
 //configrar una ruta
