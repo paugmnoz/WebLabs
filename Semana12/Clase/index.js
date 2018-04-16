@@ -1,7 +1,7 @@
 //guardar librería en una constante
 const express = require('express'),
-      consolidate = require('consolidate'),
-      hbs =  require('handlebars');
+    consolidate = require('consolidate'),
+    hbs = require('handlebars');
 
 //crear app
 var app = express();
@@ -13,20 +13,36 @@ app.set('view engine', 'hbs');
 app.set('views', './views');
 
 //configrar una ruta
-app.get('/', function(req, res){
+app.get('/', function (req, res) {
 
     res.render('index', {
         titulo: 'Semana 12',
         dirImg: 'https://handlebarsjs.com/images/handlebars_logo.png',
         textOne: 'lorem',
-        personas:[
+        personas: [
             'sebastian',
             'sofia',
             'pepi'
-        ]    
+        ],
+        carros: [{
+                nombre: 'MiniCouper',
+                llantas: 4,
+                cilindraje: 1.2,
+            },
+            {
+                nombre: 'Aveo',
+                llantas: 4,
+                cilindraje: 1.1,
+            },
+            {
+                nombre: 'Spark',
+                llantas: 4,
+                cilindraje: 1.6,
+            }
+        ]
     });
 });
 
-app.listen(7070, function(){
+app.listen(7070, function () {
     console.log('done in port 7070');
 });
