@@ -16,7 +16,14 @@ app.set('views', './views');
 app.get('/', function(req, res){
 
     res.render('index', {
-        titulo: 'Hola'
+        titulo: 'Semana 12',
+        dirImg: 'https://handlebarsjs.com/images/handlebars_logo.png',
+        textOne: 'lorem',
+        personas:[
+            'sebastian',
+            'sofia',
+            'pepi'
+        ]    
     });
 });
 
