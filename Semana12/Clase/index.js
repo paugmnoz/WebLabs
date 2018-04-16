@@ -12,6 +12,9 @@ app.set('view engine', 'hbs');
 //definir template, y carpeta donde estara el template
 app.set('views', './views');
 
+//definir hoja de estilos
+app.use('/css', express.static('css'));
+
 //configrar una ruta
 app.get('/', function (req, res) {
 
