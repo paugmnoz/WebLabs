@@ -12,11 +12,11 @@ app.set('views', './views');
 
 app.use(express.static('public'));
 
-var name, phone, genre;
+var  age, phone, gender;
 
 app.get('/', (req, res) => {
     //Read the directory folder
-    var directoryFolder = fs.readdirSync('../Directory/people');
+    var directoryFolder = fs.readdirSync('people');
     console.log(directoryFolder);
     directoryFolder.shift();
     res.render('index', {
@@ -25,8 +25,17 @@ app.get('/', (req, res) => {
 });
 
 app.get('/user/:id', function(req, res) {
+
+    var dataFile = fs.readFileSync('../Directory/people/' + req.params.id);
+    var dataText = String(dataFile);
+    var data =  dataText.split('\n');
+    age = data[0];
+    gender = data[1];
+    console.log(age );
     res.render('contact', {
-        user: req.params.id
+        user: req.params.id,
+        age: age,
+        gender: gender
     });
 });
 
