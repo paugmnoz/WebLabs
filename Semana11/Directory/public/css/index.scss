@@ -1,5 +1,10 @@
+body{
+    width: 100%;
+}
 h1 {
     font-family: 'Open Sans', sans-serif;
+    margin: auto auto auto 1em;
+    align-content: center;
 }
 
 a:link {
@@ -11,6 +16,16 @@ ul {
     font-family: 'Open Sans', sans-serif;
 }
 
-#add{
-    
+#addBtn{
+    color: white;
+    background-color: rgb(37, 37, 83);
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    margin: auto auto auto 3em;
+
+    &:hover {
+        color: black;
+        background-color: rgb(255, 196, 0);
+    }
 }
+

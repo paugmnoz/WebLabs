@@ -5,6 +5,12 @@ const express = require('express'),
 
 var app = express();
 
+//DOM
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+
+//const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+
 //Configure the render engine (express + consolidate -> handlebars)
 app.engine('hbs', consolidate.handlebars);
 app.set('view engine', 'hbs');
@@ -22,7 +28,20 @@ app.get('/', (req, res) => {
     res.render('index', {
         directoryFolder: directoryFolder
     });
+    
+   /* document.addEventListener("DOMContentLoaded", function(event) {
+        var btn =$('#addBtn').on('click', '#addBtn', function () { alert('clicked'); });
+        console.log(btn);
+      
+    });*/
 });
+
+var handlers = {
+    addUser: function () {
+        console.log("adsadsfadsfad");
+
+    },
+}
 
 app.get('/user/:id', function(req, res) {
 
