@@ -30,8 +30,9 @@ app.get('/', (req, res) => {
         })*/
     var product = db.collection('camisas')
         .find();
-
-    product.filter({artista: "crysalis"});
+    
+    if (req.query.artista) 
+    product.filter({artista: req.query.artista});
 
     product.toArray((err, result) => {
         res.render('index', {
