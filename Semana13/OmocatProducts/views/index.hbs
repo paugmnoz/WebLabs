@@ -6,22 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .camisa {
+            display: flex;
+            flex-direction: row;
+
+        }
+    </style>
 </head>
 
 <body>
+    <h2>Carrito: <span class="carrito">0</span></h2>
     <h1>SHIRTS</h1>
     <h3>Filtrar por artista</h2>
         <a href="/?artista=crysalis">Crysalis</a>
         <a href="/?artista=sebqr">Sebqr</a>
         <a href="/">Todas</a>
     
-        <div class="camisa">
+    <br/>
+    <input type="range" name="" id="slider">
+    <button class="buscar">Buscar</button>
+
+
             {{#each camisas}} 
+        <div class="camisa" data-id={{this._id}} >
+          
+            <a href="/productos/"+{{_id}}>ir</a>
             <img src="{{img_principal}}" alt="">
             <h5>{{nombre}}</h5> 
             <p>{{artista}}</p>
-            <p>{{talla}}</p> {{/each}}
-        </div>
+            <p>{{talla}}</p>
+            <button class="add">Add</button>
+                  </div>
+          {{/each}}
+<script src='js/cliente.js'></script>
+<script src='js/productos.js'></script>
+
 </body>
 
 </html>
